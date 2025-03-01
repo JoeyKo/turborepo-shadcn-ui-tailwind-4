@@ -26,6 +26,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@workspace/lightbox':
+        specifier: workspace:*
+        version: link:../../packages/lightbox
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -109,6 +112,55 @@ importers:
         specifier: ^8.24.1
         version: 8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
 
+  packages/lightbox:
+    dependencies:
+      '@babylonjs/core':
+        specifier: ^7.51.1
+        version: 7.51.1
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../ui
+      lucide-react:
+        specifier: 0.477.0
+        version: 0.477.0(react@19.0.0)
+      next:
+        specifier: 15.2.0
+        version: 15.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      next-themes:
+        specifier: ^0.4.4
+        version: 0.4.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react:
+        specifier: 19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: 19.0.0
+        version: 19.0.0(react@19.0.0)
+    devDependencies:
+      '@tailwindcss/postcss':
+        specifier: ^4
+        version: 4.0.6
+      '@types/node':
+        specifier: ^20
+        version: 20.17.19
+      '@types/react':
+        specifier: 19.0.10
+        version: 19.0.10
+      '@types/react-dom':
+        specifier: 19.0.4
+        version: 19.0.4(@types/react@19.0.10)
+      '@workspace/eslint-config':
+        specifier: workspace:^
+        version: link:../eslint-config
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      tailwindcss:
+        specifier: ^4
+        version: 4.0.6
+      typescript:
+        specifier: ^5
+        version: 5.7.3
+
   packages/typescript-config: {}
 
   packages/ui:
@@ -181,6 +233,9 @@ packages:
   '@babel/runtime-corejs3@7.26.0':
     resolution: {integrity: sha512-YXHu5lN8kJCb1LOb9PgV6pvak43X2h4HvRApcN5SdWeaItQOzfn1hgP6jasD6KWQyJDBxrVmA9o9OivlnNJK/w==}
     engines: {node: '>=6.9.0'}
+
+  '@babylonjs/core@7.51.1':
+    resolution: {integrity: sha512-YSw9CzM2NnkWS305W2Ir1yLgVt8xxasucFL29D2D3GNXMWnzijhTE/Qk1u46KBqt+yXU7B6dpkk7h6Az2aQ14A==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -2678,6 +2733,8 @@ snapshots:
     dependencies:
       core-js-pure: 3.39.0
       regenerator-runtime: 0.14.1
+
+  '@babylonjs/core@7.51.1': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:

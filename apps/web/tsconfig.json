@@ -5,6 +5,7 @@
     "paths": {
       "@/*": ["./*"],
       "@workspace/ui/*": ["../../packages/ui/src/*"],
+      "@workspace/lightbox/*": ["../../packages/lightbox/src/*"],
       "react": ["./node_modules/@types/react"]
     },
     "plugins": [

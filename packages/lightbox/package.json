@@ -1,20 +1,24 @@
 {
-  "name": "web",
-  "version": "0.0.1",
-  "type": "module",
+  "name": "@workspace/lightbox",
+  "version": "0.0.0",
   "private": true,
+  "type": "module",
+  "exports": {
+    "./globals.css": "./src/styles/globals.css",
+    "./postcss.config": "./postcss.config.mjs",
+    "./lib/*": "./src/lib/*.ts",
+    "./components/*": "./src/components/*.tsx",
+    "./hooks/*": "./src/hooks/*.ts"
+  },
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@babylonjs/core": "^7.51.1",
     "@workspace/ui": "workspace:*",
-    "@workspace/lightbox": "workspace:*",
     "lucide-react": "0.477.0",
-    "next-themes": "^0.4.4",
     "next": "15.2.0",
+    "next-themes": "^0.4.4",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },

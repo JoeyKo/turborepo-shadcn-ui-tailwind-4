@@ -5,17 +5,16 @@
   "tsx": true,
   "tailwind": {
     "config": "",
-    "css": "../../packages/ui/src/styles/globals.css",
+    "css": "../ui/src/styles/globals.css",
     "baseColor": "zinc",
     "cssVariables": true
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@/components",
-    "hooks": "@/hooks",
-    "lib": "@/lib",
-    "utils": "@workspace/ui/lib/utils",
-    "ui": "@workspace/ui/components",
+    "components": "@workspace/lightbox/components",
+    "utils": "@workspace/lightbox/lib/utils",
+    "hooks": "@workspace/lightbox/hooks",
+    "lib": "@workspace/lightbox/lib",
     "lightbox": "@workspace/lightbox/components"
   }
 }
