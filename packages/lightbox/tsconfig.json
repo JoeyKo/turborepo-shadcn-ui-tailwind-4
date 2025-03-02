@@ -3,6 +3,8 @@
   "compilerOptions": {
     //"outDir": "dist"
     "baseUrl": ".",
+    "allowJs": true, // import external js files
+    "noEmit": true,
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {

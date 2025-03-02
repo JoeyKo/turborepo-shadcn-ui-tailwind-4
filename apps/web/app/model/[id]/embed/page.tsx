@@ -1,4 +1,4 @@
-import LightboxViewer from "@workspace/lightbox/components/viewer";
+import { LightboxViewer } from "@workspace/lightbox";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

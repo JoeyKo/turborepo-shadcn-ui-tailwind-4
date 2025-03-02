@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import { Engine, MeshBuilder, Scene } from "@babylonjs/core";
-
+import initWasm, { wasm_serialize } from "@/assets/js/serialize_json_wasm.js"  
 const LightboxViewer: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
@@ -24,6 +24,8 @@ const LightboxViewer: React.FC = () => {
       scene.render();
     });
 
+    initWasm().then(() => {
+      console.log("Wasm initialized");});
     return () => {
       engine.dispose();
     };
@@ -39,4 +41,4 @@ const LightboxViewer: React.FC = () => {
   );
 };
 
-export default LightboxViewer;
+export { LightboxViewer };
