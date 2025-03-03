@@ -6,17 +6,12 @@ export const metadata: Metadata = {
   description: "This is the embed page for displaying content.",
 };
 
-interface EmbedPageProps {
-  id: string;
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const id = (await params).id
+  console.log(id)
+  return <LightboxViewer />
 }
-
-const EmbedPage: React.FC<EmbedPageProps> = ({ id }) => {
-  console.log(id);
-  return (
-    <>
-      <LightboxViewer />
-    </>
-  );
-};
-
-export default EmbedPage;

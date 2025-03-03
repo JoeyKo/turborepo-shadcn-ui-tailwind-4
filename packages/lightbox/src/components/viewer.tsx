@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import { Engine, MeshBuilder, Scene } from "@babylonjs/core";
-import initWasm, { wasm_serialize } from "@/assets/js/serialize_json_wasm.js"  
+import initWasm, { wasm_serialize } from "@workspace/lightbox/assets/js/serialize_json_wasm.js"  
 const LightboxViewer: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {

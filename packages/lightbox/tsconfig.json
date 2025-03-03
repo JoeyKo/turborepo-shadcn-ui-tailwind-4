@@ -8,7 +8,6 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {
-      "@/*": ["./src/*"],
       "@workspace/lightbox/*": ["./src/*"],
       "react": ["./node_modules/@types/react"],
       "@workspace/ui/*": ["../ui/src/*"],
